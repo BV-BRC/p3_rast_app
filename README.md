@@ -1,2 +1,2 @@
-# p3_module_template
-Template repository for PATRIC release engineered modules.
+# p3_rast_app
+PATRIC application wrapper for running RAST jobs with the PATRIC RASTtk pipeline.
