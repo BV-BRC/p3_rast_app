@@ -3,7 +3,7 @@
 #
 
 use Bio::KBase::AppService::AppScript;
-use Bio::KBase::AppService::GenomeAnnotationCore;
+use Bio::P3::GenomeAnnotationApp::GenomeAnnotationCore;
 use Bio::KBase::AppService::AppConfig qw(data_api_url db_host db_user db_pass db_name seedtk);
 use IPC::Run;
 use SolrAPI;
@@ -82,9 +82,9 @@ sub process_genome
 	die "Both a workflow document and a recipe may not be supplied to an annotation request";
     }
 
-    my $core = Bio::KBase::AppService::GenomeAnnotationCore->new(app => $app,
-								 app_def => $app_def,
-								 params => $params);
+    my $core = Bio::P3::GenomeAnnotationApp::GenomeAnnotationCore->new(app => $app,
+								       app_def => $app_def,
+								       params => $params);
 
     my $user_id = $core->user_id;
 
